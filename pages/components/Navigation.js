@@ -1,9 +1,10 @@
-import Link from "next/link";
+// import Link from "next/link";
+import Link from "./ActiveLink";
 
 export default function Navigation() {
 	return (
 		<div className="md:pt-16">
-			<Link activeClassName="active" href="/">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/">
 				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10.4062 9.00007H1.96868C0.883095 9.00007 0 8.11697 0 7.03118V1.96868C0 0.883095 0.883095 0 1.96868 0H10.4062C11.492 0 12.3751 0.883095 12.3751 1.96868V7.03118C12.3751 8.11697 11.492 9.00007 10.4062 9.00007ZM1.96868 1.6875C1.81357 1.6875 1.6875 1.81357 1.6875 1.96868V7.03118C1.6875 7.1865 1.81357 7.31257 1.96868 7.31257H10.4062C10.5615 7.31257 10.6876 7.1865 10.6876 7.03118V1.96868C10.6876 1.81357 10.5615 1.6875 10.4062 1.6875H1.96868Z" />

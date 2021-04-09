@@ -14,10 +14,12 @@ export default function Layout({ children }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
 			</Head>
-			
+
 			<div className="hidden md:grid md:grid-flow-col md:grid-cols-4 lg:grid-cols-5">
-				<div className="col-span-1 bg-purple md:min-h-screen">
-					<Navigation />
+				<div className="col-span-1 bg-purple md:h-full">
+					<div className="h-screen fixed overflow-hidden">
+						<Navigation />
+					</div>
 				</div>
 				<div className="md:col-span-3 lg:col-span-4">
 					<Header />
