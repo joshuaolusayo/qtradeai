@@ -21,7 +21,7 @@ export default function Home() {
 					<title>Qtrade AI</title>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<div className="p-4 dashboard">
+				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
 					<div className="flex justify-between items-center">
 						<h1>Dashboard</h1>
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
