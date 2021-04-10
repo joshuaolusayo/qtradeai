@@ -13,19 +13,6 @@ import Rewards from "./components/Dashboard/Rewards";
 
 export default function Home() {
 	const [open, setOpen] = useState(true);
-	const [width, setWidth] = useState("");
-
-	const checkWidth = () => {
-		window.innerWidth >= 768 ? setWidth(true) : setWidth(false);
-	};
-
-	useEffect(() => {
-		window.innerWidth >= 768 ? setWidth(true) : setWidth(false);
-
-		window.addEventListener("resize", checkWidth);
-
-		return () => window.removeEventListener("resize", checkWidth);
-	}, [width]);
 
 	return (
 		<div>

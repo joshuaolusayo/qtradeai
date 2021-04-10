@@ -16,14 +16,17 @@ export default function Carousel() {
 		responsive: [
 			{
 				breakpoint: 567,
-				settings: [{ slidesToShow: 1, slidesToScroll: 1 }],
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
 			},
 		],
 	};
 
 	return (
 		<div>
-			<Slider {...settings} className="mx-0">
+			<Slider {...settings} className="mx-0 my-6">
 				<div className="bg-purple rounded-2xl py-8 px-6 mx-0 w-100 text-white">
 					<h3 className="font-bold mb-2">GEI Products</h3>
 					<h2 className="font-bold">NGN</h2>

@@ -1,30 +1,29 @@
-// import Link from "next/link";
 import Link from "./ActiveLink";
 
 export default function Navigation() {
 	return (
 		<div className="md:pt-16">
 			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10.4062 9.00007H1.96868C0.883095 9.00007 0 8.11697 0 7.03118V1.96868C0 0.883095 0.883095 0 1.96868 0H10.4062C11.492 0 12.3751 0.883095 12.3751 1.96868V7.03118C12.3751 8.11697 11.492 9.00007 10.4062 9.00007ZM1.96868 1.6875C1.81357 1.6875 1.6875 1.81357 1.6875 1.96868V7.03118C1.6875 7.1865 1.81357 7.31257 1.96868 7.31257H10.4062C10.5615 7.31257 10.6876 7.1865 10.6876 7.03118V1.96868C10.6876 1.81357 10.5615 1.6875 10.4062 1.6875H1.96868Z" />
 						<path d="M10.4062 27H1.96868C0.883095 27 0 26.1169 0 25.0313V13.2188C0 12.133 0.883095 11.2499 1.96868 11.2499H10.4062C11.492 11.2499 12.3751 12.133 12.3751 13.2188V25.0313C12.3751 26.1169 11.492 27 10.4062 27ZM1.96868 12.9374C1.81357 12.9374 1.6875 13.0635 1.6875 13.2188V25.0313C1.6875 25.1864 1.81357 25.3125 1.96868 25.3125H10.4062C10.5615 25.3125 10.6876 25.1864 10.6876 25.0313V13.2188C10.6876 13.0635 10.5615 12.9374 10.4062 12.9374H1.96868Z" />
 						<path d="M25.0314 27H16.5939C15.5081 27 14.625 26.1169 14.625 25.0313V19.9688C14.625 18.883 15.5081 17.9999 16.5939 17.9999H25.0314C26.117 17.9999 27.0001 18.883 27.0001 19.9688V25.0313C27.0001 26.1169 26.117 27 25.0314 27ZM16.5939 19.6874C16.4386 19.6874 16.3125 19.8135 16.3125 19.9688V25.0313C16.3125 25.1864 16.4386 25.3125 16.5939 25.3125H25.0314C25.1865 25.3125 25.3126 25.1864 25.3126 25.0313V19.9688C25.3126 19.8135 25.1865 19.6874 25.0314 19.6874H16.5939Z" />
 						<path d="M25.0314 15.7501H16.5939C15.5081 15.7501 14.625 14.867 14.625 13.7812V1.96868C14.625 0.883095 15.5081 0 16.5939 0H25.0314C26.117 0 27.0001 0.883095 27.0001 1.96868V13.7812C27.0001 14.867 26.117 15.7501 25.0314 15.7501ZM16.5939 1.6875C16.4386 1.6875 16.3125 1.81357 16.3125 1.96868V13.7812C16.3125 13.9365 16.4386 14.0626 16.5939 14.0626H25.0314C25.1865 14.0626 25.3126 13.9365 25.3126 13.7812V1.96868C25.3126 1.81357 25.1865 1.6875 25.0314 1.6875H16.5939Z" />
 					</svg>
-					<span className="col-span-8">Dashboard</span>
+					<span className="col-span-6">Dashboard</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/order">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/order">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M24.1502 7.45159L24.1302 7.41705C24.1026 7.35962 24.0706 7.30462 24.0349 7.25236L20.2787 0.758322C20.0081 0.290567 19.5044 0 18.964 0H6.03688C5.49566 0 4.99152 0.291253 4.72105 0.760273L0.903596 7.38299C0.869213 7.44268 0.844428 7.50512 0.82692 7.56856C0.773184 7.71363 0.743652 7.87041 0.743652 8.03399V25.1392C0.743652 26.1652 1.57839 26.9999 2.60439 26.9999H22.3959C23.4219 26.9999 24.2566 26.1652 24.2566 25.1392V7.97129C24.2566 7.94835 24.2559 7.92557 24.2547 7.90289C24.2654 7.75065 24.2324 7.59366 24.1502 7.45159ZM13.3185 1.58261H18.9272L21.8821 6.69116H13.3185V1.58261ZM6.07374 1.58261H11.7359V6.69116H3.12904L6.07374 1.58261ZM22.674 25.1393C22.674 25.2926 22.5492 25.4174 22.3959 25.4174H2.60439C2.45104 25.4174 2.32627 25.2926 2.32627 25.1393V8.27378H22.674V25.1393Z" />
 					</svg>
-					<span className="col-span-8">Order</span>
+					<span className="col-span-6">Order</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/gei">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/gei-packages">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-1" y="-0.999908" width="29" height="29" fill="black">
 							<rect x="-1" y="-0.999908" width="29" height="29" />
@@ -36,11 +35,11 @@ export default function Navigation() {
 							mask="url(#path-1-outside-1)"
 						/>
 					</svg>
-					<span className="col-span-8">GEI Packages</span>
+					<span className="col-span-6">GEI Packages</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/stockist">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/stockist">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clipPath="url(#clip0)">
 							<path
@@ -85,11 +84,11 @@ export default function Navigation() {
 							</clipPath>
 						</defs>
 					</svg>
-					<span className="col-span-8">Stockist</span>
+					<span className="col-span-6">Stockist</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/ranks">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/ranks">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M19.9809 6.38086C19.9809 4.69142 21.3555 3.3168 23.0449 3.3168C24.7344 3.3168 26.109 4.69142 26.109 6.38086C26.109 8.07029 24.7344 9.44492 23.0449 9.44492C21.3555 9.44492 19.9809 8.07029 19.9809 6.38086ZM21.3629 6.38086C21.3629 7.30842 22.1174 8.06289 23.0449 8.06289C23.9725 8.06289 24.727 7.30842 24.727 6.38086C24.727 5.4533 23.9725 4.69883 23.0449 4.69883C22.1174 4.69883 21.3629 5.4533 21.3629 6.38086Z"
@@ -137,11 +136,11 @@ export default function Navigation() {
 							strokeWidth="0.2"
 						/>
 					</svg>
-					<span className="col-span-8">Ranks</span>
+					<span className="col-span-6">Ranks</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/beep-estate">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/beep-estate">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M26.55 23.7H23.9V7.1C23.9 6.82387 23.6761 6.6 23.4 6.6H15.8V0.799998C15.8 0.523872 15.5761 0.299998 15.3 0.299998H3.6C3.32387 0.299998 3.1 0.523872 3.1 0.799998V23.7H0.45C0.173873 23.7 -0.05 23.9239 -0.05 24.2C-0.05 24.4761 0.173873 24.7 0.45 24.7H26.55C26.8261 24.7 27.05 24.4761 27.05 24.2C27.05 23.9239 26.8261 23.7 26.55 23.7ZM14.8 23.7H4.1V1.3H14.8V23.7ZM22.9 23.7H15.8V7.6H22.9V23.7Z"
@@ -204,11 +203,11 @@ export default function Navigation() {
 							strokeWidth="0.1"
 						/>
 					</svg>
-					<span className="col-span-8">Beep Estate</span>
+					<span className="col-span-6">Beep Estate</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/account">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/account">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M7.17188 12.7563C7.31028 12.7563 7.44303 12.7013 7.5409 12.6034C7.63877 12.5055 7.69375 12.3728 7.69375 12.2344C7.69375 12.096 7.63877 11.9632 7.5409 11.8654C7.44303 11.7675 7.31028 11.7125 7.17188 11.7125H6.84033C6.82058 11.6113 6.77111 11.5174 6.69715 11.4435C6.59928 11.3456 6.46653 11.2906 6.32812 11.2906C6.18972 11.2906 6.05697 11.3456 5.9591 11.4435C5.88514 11.5174 5.83567 11.6113 5.81592 11.7125H5.48438C5.34597 11.7125 5.21322 11.7675 5.11535 11.8654C5.01748 11.9632 4.9625 12.096 4.9625 12.2344V13.5C4.9625 13.6384 5.01748 13.7712 5.11535 13.869C5.21322 13.9669 5.34597 14.0219 5.48438 14.0219H6.65V14.2438H5.48438C5.34597 14.2438 5.21322 14.2987 5.11535 14.3966C5.01748 14.4945 4.9625 14.6272 4.9625 14.7656C4.9625 14.904 5.01748 15.0368 5.11535 15.1346C5.21322 15.2325 5.34597 15.2875 5.48438 15.2875H5.81592C5.83567 15.3887 5.88514 15.4826 5.9591 15.5565C6.05697 15.6544 6.18972 15.7094 6.32812 15.7094C6.46653 15.7094 6.59928 15.6544 6.69715 15.5565C6.77111 15.4826 6.82058 15.3887 6.84033 15.2875H7.17188C7.31028 15.2875 7.44303 15.2325 7.5409 15.1346C7.63877 15.0368 7.69375 14.904 7.69375 14.7656V13.5C7.69375 13.3616 7.63877 13.2288 7.5409 13.131C7.44303 13.0331 7.31028 12.9781 7.17188 12.9781H6.00625V12.7563H7.17188Z"
@@ -227,11 +226,11 @@ export default function Navigation() {
 						/>
 					</svg>
 
-					<span className="col-span-8">Account</span>
+					<span className="col-span-6">Account</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/logs">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/logs">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M13.2538 10.3731C12.9248 10.044 12.3898 10.0423 12.0591 10.3714L9.28145 13.1507L8.19132 12.0589C7.86226 11.7298 7.32732 11.7298 6.99826 12.0589C6.6692 12.388 6.6692 12.9229 6.99826 13.252L8.68576 14.9395C8.84945 15.1048 9.06545 15.1875 9.28145 15.1875C9.49745 15.1875 9.71345 15.1048 9.87882 14.9411L13.2538 11.5661C13.5829 11.2371 13.5829 10.7021 13.2538 10.3731Z" />
 						<path d="M13.2538 17.1231C12.9248 16.794 12.3898 16.7923 12.0591 17.1214L9.28145 19.9007L8.19132 18.8106C7.86226 18.4815 7.32732 18.4815 6.99826 18.8106C6.6692 19.1396 6.6692 19.6746 6.99826 20.0036L8.68576 21.6911C8.84945 21.8548 9.06545 21.9375 9.28145 21.9375C9.49745 21.9375 9.71345 21.8548 9.87882 21.6911L13.2538 18.3161C13.5829 17.9871 13.5829 17.4521 13.2538 17.1231Z" />
@@ -239,16 +238,16 @@ export default function Navigation() {
 						<path d="M19.4062 18.5625H16.0312C15.5655 18.5625 15.1875 18.9405 15.1875 19.4062C15.1875 19.872 15.5655 20.25 16.0312 20.25H19.4062C19.872 20.25 20.25 19.872 20.25 19.4062C20.25 18.9405 19.872 18.5625 19.4062 18.5625Z" />
 						<path d="M21.9375 3.375H18.5625V2.53125C18.5625 2.0655 18.1845 1.6875 17.7188 1.6875H15.8878C15.5385 0.705375 14.6003 0 13.5 0C12.3997 0 11.4615 0.705375 11.1122 1.6875H9.28125C8.8155 1.6875 8.4375 2.0655 8.4375 2.53125V3.375H5.0625C4.13269 3.375 3.375 4.13269 3.375 5.0625V25.3125C3.375 26.2423 4.13269 27 5.0625 27H21.9375C22.8673 27 23.625 26.2423 23.625 25.3125V5.0625C23.625 4.13269 22.8673 3.375 21.9375 3.375ZM10.125 3.375H11.8125C12.2782 3.375 12.6562 2.997 12.6562 2.53125C12.6562 2.0655 13.0343 1.6875 13.5 1.6875C13.9657 1.6875 14.3438 2.0655 14.3438 2.53125C14.3438 2.997 14.7218 3.375 15.1875 3.375H16.875V5.0625H10.125V3.375ZM21.9375 25.3125H5.0625V5.0625H8.4375V5.90625C8.4375 6.372 8.8155 6.75 9.28125 6.75H17.7188C18.1845 6.75 18.5625 6.372 18.5625 5.90625V5.0625H21.9375V25.3125Z" />
 					</svg>
-					<span className="col-span-8">Logs</span>
+					<span className="col-span-6">Logs</span>
 				</a>
 			</Link>
-			<Link activeClassName="active" href="/profile">
-				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-10 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
+			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/profile">
+				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M27 13.5C27 6.0387 20.9621 0 13.5 0C6.0387 0 0 6.03788 0 13.5C0 20.8952 5.98741 27 13.5 27C20.9817 27 27 20.9292 27 13.5ZM13.5 1.58203C20.0716 1.58203 25.418 6.92839 25.418 13.5C25.418 15.9039 24.703 18.2146 23.377 20.1717C18.0525 14.4443 8.95722 14.434 3.62302 20.1717C2.29704 18.2146 1.58203 15.9039 1.58203 13.5C1.58203 6.92839 6.92839 1.58203 13.5 1.58203ZM4.60973 21.4365C9.34387 16.1264 17.6574 16.1277 22.3901 21.4365C17.6401 26.7507 9.36179 26.7524 4.60973 21.4365Z" />
 						<path d="M13.5 14.291C16.1169 14.291 18.2461 12.1619 18.2461 9.54492V7.96289C18.2461 5.34595 16.1169 3.2168 13.5 3.2168C10.8831 3.2168 8.75391 5.34595 8.75391 7.96289V9.54492C8.75391 12.1619 10.8831 14.291 13.5 14.291ZM10.3359 7.96289C10.3359 6.21812 11.7552 4.79883 13.5 4.79883C15.2448 4.79883 16.6641 6.21812 16.6641 7.96289V9.54492C16.6641 11.2897 15.2448 12.709 13.5 12.709C11.7552 12.709 10.3359 11.2897 10.3359 9.54492V7.96289Z" />
 					</svg>
-					<span className="col-span-8">Profile</span>
+					<span className="col-span-6">Profile</span>
 				</a>
 			</Link>
 
@@ -259,8 +258,15 @@ export default function Navigation() {
 					}
 
 					@media screen and (max-width: 767px) {
-						a:hover {
+						a:hover,
+						a.active {
 							background: #09157f;
+						}
+					}
+
+					@media screen and (max-width: 767px) {
+						a.active {
+							color: #fff !important;
 						}
 					}
 
@@ -269,7 +275,8 @@ export default function Navigation() {
 					}
 
 					@media screen and (max-width: 767px) {
-						a:hover svg {
+						a:hover svg,
+						a.active svg {
 							fill: #fff;
 						}
 					}

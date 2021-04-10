@@ -2,24 +2,18 @@
 	font-family: "SFProDisplay";
 	src: url("/fonts/SFProDisplay-Regular.ttf");
 	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
 }
 
 @font-face {
 	font-family: "SFProDisplayBold";
 	src: url("/fonts/SFProDisplay-Semibold.ttf");
 	font-style: normal;
-	font-weight: 900;
-	font-display: swap;
 }
 
 @font-face {
 	font-family: "SFProDisplayThin";
 	src: url("/fonts/SFProDisplay-Thin.ttf");
 	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
 }
 
 html,
@@ -39,6 +33,10 @@ body {
 
 .text-purple {
 	color: #09157f;
+}
+
+.bg-theme {
+	background: #f7f8fc;
 }
 
 .border-purple {
