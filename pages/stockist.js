@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 import Image from "next/image";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -21,7 +21,7 @@ const countries = [
 ];
 
 export default function BeepEstate() {
-	const [currency, setCurrency] = React.useState("EUR");
+	const [currency, setCurrency] = useState("United States");
 
 	const handleChange = (event) => {
 		setCurrency(event.target.value);
