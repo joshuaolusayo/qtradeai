@@ -5,7 +5,7 @@ export default function Requirement() {
 		<>
 			<div className="grid md:grid-cols-2 md:gap-4">
 				<h2 className="text-purple font-bold md:hidden pt-8 pb-4">Trust Commitment</h2>
-				<div className="bg-white p-4 rounded-md md:rounded-2xl border border-gray-500">
+				<div className="bg-white p-4 md:py-8 md:px-5 rounded-md md:rounded-2xl border border-gray-500">
 					<h3 className="text-purple">GET PLATINUM MEMBERSHIP</h3>
 					<h4 className="text-gray-400 my-3 font-bold">NGN 1,015,000</h4>
 					<Link href="/">
@@ -22,7 +22,7 @@ export default function Requirement() {
 				</div>
 
 				<h2 className="text-purple font-bold md:hidden pt-8 pb-4">GEI Requirement</h2>
-				<div className="bg-white p-4 rounded-md md:rounded-2xl border border-gray-500">
+				<div className="bg-white p-4 md:py-8 md:px-5 rounded-md md:rounded-2xl border border-gray-500">
 					<h3 className="text-purple">GET PLATINUM MEMBERSHIP</h3>
 					<h4 className="text-gray-400 my-3 font-bold">NGN 1,015,000</h4>
 					<Link href="/">
@@ -39,8 +39,20 @@ export default function Requirement() {
 				</div>
 			</div>
 			<style jsx>{`
+				h3 {
+					font-size: 14px;
+				}
+
 				h4 {
-					font-size: 30px;
+					font-size: 24px;
+				}
+
+				a {
+					font-size: 15px;
+				}
+
+				span {
+					font-size: 14px;
 				}
 			`}</style>
 		</>

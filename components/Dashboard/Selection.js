@@ -28,7 +28,7 @@ export default function Selection() {
 
 	return (
 		<>
-			<div className="my-10">
+			<div className="my-10 md:my-20">
 				<div>
 					<FormControl className="w-full mb-3">
 						<InputLabel id="demo-controlled-open-select-label" className="w-full input">

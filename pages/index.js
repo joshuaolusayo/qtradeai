@@ -49,11 +49,11 @@ export default function Home() {
 						<Rewards />
 						<Requirement />
 					</div>
-					<div className="md:grid md:grid-cols-6 md:gap-4">
+					<div className="md:grid md:grid-cols-6 md:gap-8">
 						<div className="hidden md:block md:col-span-6 xl:col-span-3 my-6">
 							<Invoice />
 						</div>
-						<div className="hidden md:block md:col-span-6 xl:col-span-3 mt-10 mb-6">
+						<div className="hidden md:block md:col-span-6 xl:col-span-3 mt-14 mb-6">
 							<Requirement />
 							<Selection />
 						</div>

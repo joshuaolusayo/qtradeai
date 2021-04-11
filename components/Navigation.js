@@ -2,7 +2,7 @@ import Link from "./ActiveLink";
 
 export default function Navigation() {
 	return (
-		<div className="md:pt-16">
+		<div className="md:pt-20">
 			<Link activeClassName="active md:border-white md:bg-white md:bg-opacity-20" href="/">
 				<a className="txt-purple md:text-white nav-link grid gap-6 grid-cols-8 align-center nav-link py-4 px-5 border-l-4 border-transparent md:hover:border-white md:hover:bg-white md:hover:bg-opacity-20">
 					<svg className="col-span-2" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
