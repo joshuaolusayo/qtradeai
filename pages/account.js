@@ -6,10 +6,37 @@ import WalletAddress from "../components/Account/WalletAddress";
 import MyBanks from "../components/Account/MyBanks";
 import MyCards from "../components/Account/MyCards";
 
+import { Modal, Button } from "antd";
+
+import CreateBank from "../components/Account/CreateBank";
+
 import "antd/dist/antd.css";
+import Saving from "../components/Account/Saving";
+import Saved from "../components/Account/Saved";
 
 export default function Account() {
 	const [current, setCurrent] = useState("myBanks");
+	const [showBank, setShowBank] = useState(false);
+	const [saving, setSaving] = useState(false);
+	const [saved, setSaved] = useState(false);
+
+	const [isModalVisible, setIsModalVisible] = useState(false);
+
+	const showModal = () => {
+		setIsModalVisible(true);
+	};
+
+	const handleOk = () => {
+		setIsModalVisible(false);
+		setSaving(false);
+		setSaved(false);
+	};
+
+	const handleCancel = () => {
+		setIsModalVisible(false);
+		setSaving(false);
+		setSaved(false);
+	};
 
 	return (
 		<div>
@@ -44,9 +71,46 @@ export default function Account() {
 									/>
 								</svg>
 
-								<span className="ml-3">
-									{current === "myBanks" ? "Create Bank" : current === "walletAddress" ? "" : "Create Card"}
-								</span>
+								{current === "myBanks" ? (
+									<span
+										className="ml-3"
+										onClick={() => {
+											showModal();
+											setShowBank(true);
+										}}
+									>
+										Create Bank
+									</span>
+								) : current === "walletAddress" ? (
+									""
+								) : (
+									<span className="ml-3">Create Card</span>
+								)}
+
+								{showBank && (
+									<Modal
+										title="Creating Banking Information"
+										visible={isModalVisible}
+										onOk={handleOk}
+										onCancel={handleCancel}
+										centered
+										footer={[
+											<Button key="back" onClick={handleCancel}>
+												Close
+											</Button>,
+										]}
+									>
+										{!saving && !saved ? (
+											<CreateBank setSaved={setSaved} setSaving={setSaving} />
+										) : saving && !saved ? (
+											<Saving setSaved={setSaved} />
+										) : (
+											<Saved handleCancel={handleCancel} />
+										)}
+									</Modal>
+								)}
+
+								{/* {createBank && <CreateBank onClick={setCreateBank} />} */}
 							</div>
 						)}
 						<div className="grid grid-cols-2 justify-between gap-4 my-5">
@@ -68,7 +132,7 @@ export default function Account() {
 							>
 								My Banks
 							</button>
-							
+
 							<button
 								className={`${
 									current === "walletAddress"
@@ -79,7 +143,7 @@ export default function Account() {
 							>
 								Wallet Address
 							</button>
-							
+
 							<button
 								className={`${
 									current === "myCards"
