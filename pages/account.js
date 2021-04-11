@@ -45,7 +45,7 @@ export default function Account() {
 								</svg>
 
 								<span className="ml-3">
-									{current === "mybanks" ? "Create Bank" : current === "walletAddress" ? "" : "Create Card"}
+									{current === "myBanks" ? "Create Bank" : current === "walletAddress" ? "" : "Create Card"}
 								</span>
 							</div>
 						)}
