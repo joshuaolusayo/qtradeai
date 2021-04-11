@@ -42,3 +42,7 @@ body {
 .border-purple {
 	border-color: #09157f;
 }
+
+.rounded-circle {
+	border-radius: 50%;
+}

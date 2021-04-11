@@ -1,7 +1,6 @@
 import TextField from "@material-ui/core/TextField";
 
 export default function CreateBank(props) {
-	console.log(props);
 	return (
 		<>
 			<span className="font-gray-500">We need your information in order to process your withdrawal</span>
