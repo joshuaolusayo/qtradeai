@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 import { Fade as Hamburger } from "hamburger-react";
 import Header from "./Header";
 import Navigation from "./Navigation";
 
-export default function Layout({ children }) {
+export default function Layout({ children, title = "Dashboard", back = "false" }) {
 	const [isOpen, setOpen] = useState(false);
 
 	return (
@@ -34,9 +35,27 @@ export default function Layout({ children }) {
 				}}
 			>
 				<div className="flex justify-between items-center p-2 shadow sm:px-4 fixed w-full z-20 bg-white">
-					<Hamburger toggled={isOpen} toggle={setOpen} />
-					<h3 className="text-black">Ayomide Olopha</h3>
-					<Image src="/assets/profile.png" width={40} height={40} />
+					{!back ? (
+						<Hamburger toggled={isOpen} toggle={setOpen} />
+					) : (
+						<Link href="/profile">
+							<a className="py-2 pl-2">
+								<svg width="14" height="20" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M14 25L2 13.5L14 2"
+										stroke="#09157F"
+										stroke-width="4"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+						</Link>
+					)}
+
+					<h3 className="text-black mb-0">{title}</h3>
+					{/* <Image src="/assets/profile.png" width={40} height={40} /> */}
+					<span></span>
 				</div>
 				<div className="pt-16"></div>
 

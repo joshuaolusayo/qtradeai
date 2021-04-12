@@ -8,7 +8,7 @@ import "antd/dist/antd.css";
 export default function Logs() {
 	return (
 		<div>
-			<Layout>
+			<Layout title="Logs">
 				<Head>
 					<title>Logs</title>
 				</Head>
@@ -19,17 +19,19 @@ export default function Logs() {
 					</div>
 
 					<>
-						<div className="grid grid-cols-2 xl:grid-cols-3 justify-between gap-4 my-10">
-							<div className="col-span-1 h-20 flex justify-center items-center bg-purple rounded-xl shadow text-white text-center md:my-0">
+						<div className="grid grid-cols-3 justify-between gap-4 my-10">
+							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Withdrawal
 							</div>
-							<div className="col-span-1 h-20 flex justify-center items-center bg-purple rounded-xl shadow text-white text-center md:my-0">
+							<div className="col-span-1"></div>
+							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Subscription
 							</div>
-							<div className="col-span-1 h-20 flex justify-center items-center bg-purple rounded-xl shadow text-white text-center md:my-0">
+							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Transfers
 							</div>
-							<div className="col-span-1 h-20 flex justify-center items-center bg-purple rounded-xl shadow text-white text-center md:my-0">
+							<div className="col-span-1"></div>
+							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Transactions
 							</div>
 						</div>

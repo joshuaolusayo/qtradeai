@@ -103,7 +103,7 @@ export default function Stockist() {
 
 	return (
 		<div>
-			<Layout>
+			<Layout title="Stockist">
 				<Head>
 					<title>Stockist</title>
 				</Head>
@@ -124,7 +124,7 @@ export default function Stockist() {
 						<Search
 							placeholder="Search packages"
 							onSearch={onSearch}
-							className="my-3 search-box mb-5"
+							className="my-3 search-box mb-5 shadow-none"
 						/>
 						<div className="grid grid-cols-3 gap-1 w-100 justify-center mb-5 items-center">
 							<span className="col-span-3 md:col-span-1">Filter By State: </span>

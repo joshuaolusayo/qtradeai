@@ -8,7 +8,7 @@ export default function BeepEstate() {
 	const [value, setValue] = useState("");
 	return (
 		<div>
-			<Layout>
+			<Layout title="Beep Estate">
 				<Head>
 					<title>Beep Estate</title>
 				</Head>
@@ -25,7 +25,7 @@ export default function BeepEstate() {
 						value={value}
 						onChange={(newValue) => setValue(newValue)}
 						style={{ background: "transparent" }}
-						className="border border-purple"
+						className="border border-purple shadow-none"
 						placeholder="Search Packages"
 						// onRequestSearch={() => doSomethingWith(value)}
 					/>

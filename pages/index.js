@@ -16,7 +16,7 @@ export default function Home() {
 
 	return (
 		<div>
-			<Layout>
+			<Layout title="Dashboard">
 				<Head>
 					<title>Qtrade AI</title>
 					<link rel="icon" href="/favicon.ico" />

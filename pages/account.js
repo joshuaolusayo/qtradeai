@@ -40,7 +40,7 @@ export default function Account() {
 
 	return (
 		<div>
-			<Layout>
+			<Layout title="Account">
 				<Head>
 					<title>Account</title>
 				</Head>

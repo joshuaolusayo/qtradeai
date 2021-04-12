@@ -8,7 +8,7 @@ export default function GEI() {
 	const [value, setValue] = useState("");
 	return (
 		<div>
-			<Layout>
+			<Layout title="GEI Packages">
 				<Head>
 					<title>GEI Packages</title>
 				</Head>
@@ -25,7 +25,7 @@ export default function GEI() {
 						value={value}
 						onChange={(newValue) => setValue(newValue)}
 						style={{ background: "transparent" }}
-						className="border border-purple"
+						className="border border-purple shadow-none"
 						placeholder="Search Packages"
 						// onRequestSearch={() => doSomethingWith(value)}
 					/>

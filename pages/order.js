@@ -8,7 +8,7 @@ export default function Home() {
 	const [value, setValue] = useState("");
 	return (
 		<div>
-			<Layout>
+			<Layout title="Order">
 				<Head>
 					<title>Order</title>
 				</Head>
@@ -25,7 +25,7 @@ export default function Home() {
 						value={value}
 						onChange={(newValue) => setValue(newValue)}
 						style={{ background: "transparent" }}
-						className="border border-purple"
+						className="border border-purple shadow-none"
 						placeholder="Search Packages"
 						// onRequestSearch={() => doSomethingWith(value)}
 					/>
@@ -58,7 +58,9 @@ export default function Home() {
 						</div>
 						<div className="font-bold">Remark: 0</div>
 					</div>
-					<button className="py-3 my-4 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-white hover:text-black">Subscribe</button>
+					<button className="py-3 my-4 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-white hover:text-black">
+						Subscribe
+					</button>
 				</div>
 			</Layout>
 		</div>
