@@ -121,13 +121,13 @@ export default function Account() {
 								Transfer to BMC Account
 							</div>
 						</div>
-						<div className="rounded bg-gray-300 lg:w-3/4 xl:w-1/2 flex justify-between items-center flex-wrap px-2">
+						<div className="rounded bg-gray-300 lg:w-3/4 xl:w-1/2 flex justify-between items-center flex-wrap">
 							<button
 								className={`${
 									current === "myBanks"
-										? "bg-purple text-white text-center px-4 py-2 rounded my-2 lg:px-8"
+										? "bg-purple text-white text-center px-4 py-2 rounded lg:px-8"
 										: "text-purple rounded px-1 h-full py-2"
-								} focus:outline-none`}
+								} focus:outline-none px-3`}
 								onClick={() => setCurrent("myBanks")}
 							>
 								My Banks
@@ -136,9 +136,9 @@ export default function Account() {
 							<button
 								className={`${
 									current === "walletAddress"
-										? "bg-purple text-white text-center px-4 py-2 rounded my-2 lg:px-8"
+										? "bg-purple text-white text-center px-4 py-2 rounded lg:px-8"
 										: "text-purple rounded px-1 h-full py-2"
-								} focus:outline-none`}
+								} focus:outline-none px-3`}
 								onClick={() => setCurrent("walletAddress")}
 							>
 								Wallet Address
@@ -147,9 +147,9 @@ export default function Account() {
 							<button
 								className={`${
 									current === "myCards"
-										? "bg-purple text-white text-center px-4 py-2 rounded my-2 lg:px-8"
+										? "bg-purple text-white text-center px-4 py-2 rounded lg:px-8"
 										: "text-purple rounded px-1 h-full py-2"
-								} focus:outline-none`}
+								} focus:outline-none px-3`}
 								onClick={() => setCurrent("myCards")}
 							>
 								My Cards

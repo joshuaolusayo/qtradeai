@@ -28,10 +28,10 @@ export default function Selection() {
 
 	return (
 		<>
-			<div className="my-10 md:my-20">
+			<div className="my-10 selection">
 				<div>
 					<FormControl className="w-full mb-3">
-						<InputLabel id="demo-controlled-open-select-label" className="w-full input">
+						<InputLabel id="demo-controlled-open-select-label" className="w-full">
 							Choose
 						</InputLabel>
 						<Select
@@ -43,7 +43,7 @@ export default function Selection() {
 							value={selectedOption}
 							onChange={handleChange}
 							defaultValue="my-referrals"
-							className="text-white p-2"
+							className="py-1 px-4 bg-purple rounded"
 						>
 							<MenuItem value={"my-referrals"} className="text-purple">
 								My referrals

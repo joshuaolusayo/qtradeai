@@ -54,6 +54,18 @@ export default function Requirement() {
 				span {
 					font-size: 10px;
 				}
+
+				@media screen and (min-width: 1280px) {
+					span {
+						font-size: 11px;
+					}
+				}
+				
+				@media screen and (min-width: 1440px) {
+					span {
+						font-size: 12px;
+					}
+				}
 			`}</style>
 		</>
 	);

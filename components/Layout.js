@@ -16,13 +16,13 @@ export default function Layout({ children, title = "Dashboard", back=false }) {
 				<meta charSet="utf-8" />
 			</Head>
 
-			<div className="hidden md:grid md:grid-flow-col md:grid-cols-4 lg:grid-cols-5">
+			<div className="hidden md:grid md:grid-flow-col md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
 				<div className="col-span-1 bg-purple md:h-full">
-					<div className="h-screen bg-purple md:w-1/4 lg:w-1/5 fixed overflow-hidden">
+					<div className="h-screen bg-purple md:w-1/4 lg:w-1/5 xl:w-1/6 fixed overflow-hidden">
 						<Navigation />
 					</div>
 				</div>
-				<div className="md:col-span-3 lg:col-span-4 bg-theme">
+				<div className="md:col-span-3 lg:col-span-4 xl:col-span-5 bg-theme">
 					<Header />
 					{children}
 				</div>

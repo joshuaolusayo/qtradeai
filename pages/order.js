@@ -12,7 +12,7 @@ export default function Home() {
 				<Head>
 					<title>Order</title>
 				</Head>
-				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
+				<div className="p-4 md:p-6 lg:p-10 min-h-screen order">
 					<div className="flex justify-between items-center">
 						<h1>Order</h1>
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />

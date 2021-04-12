@@ -26,7 +26,7 @@ export default function Home() {
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
 					</div>
 					{open && (
-						<div className="relative px-2 py-3 my-3 bg-gray-50 border-2 border-purple rounded">
+						<div className="relative px-2 md:px-4 py-3 my-3 bg-gray-50 border-2 border-purple rounded">
 							<span className="text-sm">
 								BMWToken now trading on Naija Crypt exchange paired with NGN --{" "}
 								<Link href="/">
@@ -48,11 +48,11 @@ export default function Home() {
 						<Rewards />
 						<Requirement />
 					</div>
-					<div className="md:grid md:grid-cols-6 md:gap-8">
-						<div className="hidden md:block md:col-span-6 xl:col-span-3 my-6">
+					<div className="md:grid md:grid-cols-6 xl:grid-cols-5 md:gap-8">
+						<div className="hidden md:block md:col-span-6 xl:col-span-2 mt-6">
 							<Invoice />
 						</div>
-						<div className="hidden md:block md:col-span-6 xl:col-span-3 my-6 md:my-0">
+						<div className="hidden md:block md:col-span-6 xl:col-span-3 my-6 md:my-0 xl:mt-14">
 							<Requirement />
 							<Selection />
 						</div>

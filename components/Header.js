@@ -9,7 +9,7 @@ export default function Header() {
 	}, [width]);
 	return (
 		<>
-			<header className="bg-white w-3/4 sm:w-1/2 md:w-3/4 lg:w-4/5 z-20 fixed">
+			<header className="bg-white w-3/4 sm:w-1/2 md:w-3/4 lg:w-4/5 xl:w-5/6 z-20 fixed">
 				<div className="md:shadow-sm py-10 px-4 md:p-4 flex justify-between items-center">
 					<div className="hidden md:block">
 						<Image src="/assets/logo.png" alt="Logo" width={186} height={37} />

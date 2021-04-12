@@ -41,7 +41,7 @@ export default function Logs() {
 						<div className="rounded bg-gray-300 lg:w-3/4 xl:w-1/2 flex justify-between items-center flex-wrap px-0">
 							<button
 								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
-									current === "orders" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+									current === "orders" ? "bg-purple text-white px-4 lg:px-8" : "text-purple px-2"
 								} `}
 								onClick={() => setCurrent("orders")}
 							>
@@ -50,7 +50,7 @@ export default function Logs() {
 							|{" "}
 							<button
 								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
-									current === "withdrawals" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+									current === "withdrawals" ? "bg-purple text-white px-4 lg:px-8" : "text-purple px-2"
 								} `}
 								onClick={() => setCurrent("withdrawals")}
 							>
@@ -59,7 +59,7 @@ export default function Logs() {
 							|{" "}
 							<button
 								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
-									current === "transfers" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+									current === "transfers" ? "bg-purple text-white px-4 lg:px-8" : "text-purple px-2"
 								} `}
 								onClick={() => setCurrent("transfers")}
 							>
@@ -68,7 +68,7 @@ export default function Logs() {
 							|{" "}
 							<button
 								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
-									current === "payments" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+									current === "payments" ? "bg-purple text-white px-4 lg:px-8" : "text-purple px-2"
 								} `}
 								onClick={() => setCurrent("payments")}
 							>

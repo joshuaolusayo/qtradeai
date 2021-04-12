@@ -4,7 +4,7 @@ export default function MyBanks() {
 	return (
 		<div className="my-10 lg:w-3/4 xl:w-1/2 md:px-8 md:py-12 md:bg-white md:rounded-xl">
 			<h1 className="text-purple mb-5">Available Banks</h1>
-			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
+			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-2 text-sm sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
 				<div className="col-span-2">
 					<div className="p-4 w-10 h-10 flex justify-center items-center rounded-full text-center bg-light-blue shadow">
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +16,7 @@ export default function MyBanks() {
 					</div>
 				</div>
 				<div className="col-span-5">
-					<h3 className="text-purple font-bold">Fasisi Tariq</h3>
+					<h3 className="text-purple font-bold mb-0">Fasisi Tariq</h3>
 					<p className="text-gray-700">Sterling Bank Nigeria PLC</p>
 				</div>
 				<div className="col-span-5">
@@ -24,7 +24,7 @@ export default function MyBanks() {
 					<h3 className="text-purple font-bold">0080106259</h3>
 				</div>
 			</div>
-			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
+			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-2 text-sm sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
 				<div className="col-span-2">
 					<div className="p-4 w-10 h-10 flex justify-center items-center rounded-full text-center bg-light-blue shadow">
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ export default function MyBanks() {
 					</div>
 				</div>
 				<div className="col-span-5">
-					<h3 className="text-purple font-bold">Fasisi Tariq</h3>
+					<h3 className="text-purple font-bold mb-0">Fasisi Tariq</h3>
 					<p className="text-gray-700">Sterling Bank Nigeria PLC</p>
 				</div>
 				<div className="col-span-5">
@@ -44,7 +44,7 @@ export default function MyBanks() {
 					<h3 className="text-purple font-bold">0080106259</h3>
 				</div>
 			</div>
-			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
+			<div className="grid grid-cols-12 items-center justify-center bg-light-blue px-2 py-2 text-sm sm:px-4 sm:py-6 md:px-6 md:py-8 rounded-xl mb-5 shadow">
 				<div className="col-span-2">
 					<div className="p-4 w-10 h-10 flex justify-center items-center rounded-full text-center bg-light-blue shadow">
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ export default function MyBanks() {
 					</div>
 				</div>
 				<div className="col-span-5">
-					<h3 className="text-purple font-bold">Fasisi Tariq</h3>
+					<h3 className="text-purple font-bold mb-0">Fasisi Tariq</h3>
 					<p className="text-gray-700">Sterling Bank Nigeria PLC</p>
 				</div>
 				<div className="col-span-5">

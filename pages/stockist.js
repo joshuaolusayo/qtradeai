@@ -112,8 +112,8 @@ export default function Stockist() {
 						<h1>Stockist</h1>
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
 					</div>
-					<div className="my-10 lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center">
-						<div className="grid grid-cols-3 gap-1 sm:w-auto mb-5 items-center order-last md:order-none">
+					<div className="my-10 md:grid md:grid-cols-6 xl:grid-cols-12 md:gap-4 md:items-center text-sm">
+						<div className="grid grid-cols-3 col-span-2 gap-1 sm:w-auto mb-5 md:mb-0 items-center order-last md:order-none">
 							<span className="col-span-3 md:col-span-1">Sort By: </span>
 							<Select defaultValue="name" onChange={handleChange} className="bg-purple text-light col-span-3 md:col-span-2">
 								<Option value="name">Name</Option>
@@ -124,9 +124,9 @@ export default function Stockist() {
 						<Search
 							placeholder="Search packages"
 							onSearch={onSearch}
-							className="my-3 search-box mb-5 shadow-none"
+							className="search-box mb-5 md:mb-0 shadow-none col-span-4"
 						/>
-						<div className="grid grid-cols-3 gap-1 w-100 justify-center mb-5 items-center">
+						<div className="grid grid-cols-3 col-span-3 gap-1 w-100 justify-center mb-5 md:mb-0 items-center">
 							<span className="col-span-3 md:col-span-1">Filter By State: </span>
 							<Select
 								defaultValue="all"
@@ -137,7 +137,7 @@ export default function Stockist() {
 								<Option value="abia">Abia</Option>
 							</Select>
 						</div>
-						<div className="grid grid-cols-3 gap-1 justify-center mb-5 items-center">
+						<div className="grid grid-cols-3 col-span-3 gap-1 justify-center mb-5 md:mb-0 items-center">
 							<span className="col-span-3 md:col-span-1">Filter By LG: </span>
 							<Select
 								defaultValue="all"
@@ -155,7 +155,7 @@ export default function Stockist() {
 						dataSource={tableData}
 						pagination={pagination}
 						size="small"
-						className="my-10"
+						className="my-10 text-sm"
 						scroll={{ x: true }}
 					/>
 				</div>
