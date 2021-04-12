@@ -1,11 +1,14 @@
+import { useState } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import TableData from "../components/Table";
+import Log from "../components/Log";
 
 import "antd/dist/antd.css";
 
 export default function Logs() {
+	const [current, setCurrent] = useState("orders");
+
 	return (
 		<div>
 			<Layout title="Logs">
@@ -19,29 +22,60 @@ export default function Logs() {
 					</div>
 
 					<>
-						<div className="grid grid-cols-3 justify-between gap-4 my-10">
-							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
+						<div className="grid grid-cols-2 md:grid-cols-3 justify-between gap-4 my-10">
+							<div className="md:col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Withdrawal
 							</div>
-							<div className="col-span-1"></div>
-							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
+							<div className="hidden md:block md:col-span-1"></div>
+							<div className="md:col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Subscription
 							</div>
-							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
+							<div className="md:col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Transfers
 							</div>
-							<div className="col-span-1"></div>
-							<div className="col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
+							<div className="hidden md:block md:col-span-1"></div>
+							<div className="md:col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">
 								Transactions
 							</div>
 						</div>
-						<div className="rounded bg-gray-300 lg:w-3/4 xl:w-1/2 flex justify-between items-center flex-wrap px-2">
-							<button className="bg-purple text-white rounded text-center px-4 lg:px-8 h-full py-2 my-2">Orders</button> |{" "}
-							<button className="text-purple rounded text-center px-1 h-full py-2 my-2">Withdrawals</button> |{" "}
-							<button className="text-purple rounded text-center px-1 h-full py-2 my-2">Transfers</button> |{" "}
-							<button className="text-purple rounded text-center px-1 h-full py-2 my-2">Payments</button>
+						<div className="rounded bg-gray-300 lg:w-3/4 xl:w-1/2 flex justify-between items-center flex-wrap px-0">
+							<button
+								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
+									current === "orders" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+								} `}
+								onClick={() => setCurrent("orders")}
+							>
+								Orders
+							</button>{" "}
+							|{" "}
+							<button
+								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
+									current === "withdrawals" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+								} `}
+								onClick={() => setCurrent("withdrawals")}
+							>
+								Withdrawals
+							</button>{" "}
+							|{" "}
+							<button
+								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
+									current === "transfers" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+								} `}
+								onClick={() => setCurrent("transfers")}
+							>
+								Transfers
+							</button>{" "}
+							|{" "}
+							<button
+								className={`rounded text-center h-full py-2 my-0 focus:outline-none ${
+									current === "payments" ? "bg-purple text-white px-4 lg:px-8" : "text-purple xs:px-1"
+								} `}
+								onClick={() => setCurrent("payments")}
+							>
+								Payments
+							</button>
 						</div>
-						<TableData />
+						<Log />
 					</>
 				</div>
 			</Layout>

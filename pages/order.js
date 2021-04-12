@@ -17,21 +17,21 @@ export default function Home() {
 						<h1>Order</h1>
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
 					</div>
-					<div className="my-10 md:my-20">
-						<h2 className="font-bold text-center text-2xl mb-2">Plans built for your every need</h2>
-						<p className="text-center font-light text-gray-500">Support/Subscription Packages</p>
+					<div className="my-14">
+						<h2 className="font-bold text-center text-2xl mb-1">Plans built for your every need</h2>
+						<p className="text-center font-thin text-gray-500 mb-0">Support/Subscription Packages</p>
 					</div>
 					<SearchBar
 						value={value}
 						onChange={(newValue) => setValue(newValue)}
 						style={{ background: "transparent" }}
 						className="border border-purple shadow-none"
-						placeholder="Search Packages"
+						placeholder="Search Order"
 						// onRequestSearch={() => doSomethingWith(value)}
 					/>
-					<div className="my-8 py-10 text-center border border-purple bg-gray-100 rounded-md">
+					<div className="my-8 py-8 text-center border border-purple bg-gray-50 rounded-md md:px-16 lg:px-20">
 						<h2 className="text-3xl">NGN25,000</h2>
-						<p className="my-3">Per Subscription</p>
+						<p className="my-1 text-black">Per Subscription</p>
 						<p className="text-gray-500">BMCT Affiliate (BMCTOKEN Reward)</p>
 					</div>
 					<div className="grid grid-cols-3 md:grid-cols-5 gap-4">
@@ -58,7 +58,7 @@ export default function Home() {
 						</div>
 						<div className="font-bold">Remark: 0</div>
 					</div>
-					<button className="py-3 my-4 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-white hover:text-black">
+					<button className="py-3 my-4 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-black transition duration-300 ease">
 						Subscribe
 					</button>
 				</div>

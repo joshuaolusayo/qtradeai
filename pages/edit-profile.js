@@ -1,11 +1,10 @@
 import Head from "next/head";
-import TextField from "@material-ui/core/TextField";
 import Layout from "../components/Layout";
 
 export default function EditProfile() {
 	return (
 		<div>
-			<Layout title="Edit Profile" back="true">
+			<Layout title="Edit Profile" back={true}>
 				<Head>
 					<title>Edit Profile</title>
 				</Head>
@@ -14,63 +13,47 @@ export default function EditProfile() {
 					<div className="my-10 flex flex-col justify-center text-left w-full md:pt-6">
 						<h2 className="hidden md:block text-purple font-bold">Change Password</h2>
 						<form className="my-5 w-full">
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="Full Name: (Ayomide Olopha)"
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">Full Name</label>
+								<input
+									className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm"
 									type="text"
-									variant="outlined"
-									className="w-full"
+									placeholder="Ayomide Olopha"
 								/>
 							</div>
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="Phone Number (+2347064656768)"
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">Phone Number</label>
+								<input
+									className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm"
 									type="number"
-									variant="outlined"
-									className="w-full"
+									placeholder="+2347064656768"
 								/>
 							</div>
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="Email address (ayomide@gmail.com)"
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">Phone Number</label>
+								<input
+									className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm"
 									type="email"
-									variant="outlined"
-									className="w-full"
+									placeholder="ayomideolopha@gmail.com"
 								/>
 							</div>
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="MT4 Account Number"
-									type="number"
-									variant="outlined"
-									className="w-full"
-								/>
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">MT4 Account Number</label>
+								<input className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm" type="number" />
 							</div>
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="MT4 Password"
-									type="password"
-									variant="outlined"
-									className="w-full"
-								/>
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">MT4 Password</label>
+								<input className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm" type="password" />
 							</div>
-							<div className="mb-3 w-full">
-								<TextField
-									id="outlined-search"
-									label="Investors Details"
-									type="text"
-									variant="outlined"
-									className="w-full"
-								/>
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">Investors Details</label>
+								<input className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm" type="text" />
 							</div>
-							<div className="mb-3 w-full">
-								<TextField id="outlined-search" label="Address" type="text" variant="outlined" className="w-full" />
+							<div className="flex flex-col mb-5">
+								<label className="text-purple text-sm mb-1">Address</label>
+								<input className="bg-white border border-purple text-purple py-2 px-3 focus:outline-none rounded text-sm" type="text" />
 							</div>
+
 							<div>
 								<button
 									className="bg-purple w-full py-3 text-sm text-center text-white rounded mt-3 border focus:outline-none border-purple"

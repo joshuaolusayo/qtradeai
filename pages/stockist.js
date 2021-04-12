@@ -155,7 +155,7 @@ export default function Stockist() {
 						dataSource={tableData}
 						pagination={pagination}
 						size="small"
-						className=" my-10"
+						className="my-10"
 						scroll={{ x: true }}
 					/>
 				</div>

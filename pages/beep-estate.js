@@ -17,7 +17,7 @@ export default function BeepEstate() {
 						<h1>Beep Estate</h1>
 						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
 					</div>
-					<div className="my-10 md:my-20">
+					<div className="my-14">
 						<h2 className="font-bold text-center text-2xl mb-2">BeepCity Leverage Program</h2>
 						<p className="text-center font-light text-gray-500">Own YOUR Home in 12 Months</p>
 					</div>
@@ -29,11 +29,11 @@ export default function BeepEstate() {
 						placeholder="Search Packages"
 						// onRequestSearch={() => doSomethingWith(value)}
 					/>
-					<div className="my-8 py-10 text-center border border-purple bg-gray-100 rounded-md">
+					<div className="my-8 py-8 text-center border border-purple bg-gray-50 rounded-md md:px-16 lg:px-20">
 						<h2 className="text-3xl">NGN25,000</h2>
 						<p className="my-3">Per Subscription</p>
 						<p className="text-gray-500 md:hidden">BMCT Affiliate (BMCTOKEN Reward)</p>
-						<p className="text-gray-500 hidden md:block md:px-16 lg:px-20">
+						<p className="text-gray-500 hidden md:block">
 							GEI Revenue Share BRONZE PRO + TAX. 40% of your Empowerment is credited in Your MN daily wallet for 30 days. 60%
 							of your Empowerment is credited into GEI empowerment wallet for 30 days. After 30 days the wallet is unlocked if
 							you have sponsored a minimum of 5 members of the same package or Above. The default of not sponsoring 5 members
@@ -81,7 +81,7 @@ export default function BeepEstate() {
 							</p>
 						</div>
 					</div>
-					<button className="py-3 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-white hover:text-black">
+					<button className="py-3 my-4 text-center bg-purple block w-full text-white rounded border border-purple hover:bg-black transition duration-300 ease">
 						Subscribe
 					</button>
 				</div>

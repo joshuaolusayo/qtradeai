@@ -50,3 +50,7 @@ body {
 .shadow-none {
 	box-shadow: none !important;
 }
+
+.focus:outline-purple {
+	outline-color: #09157f !important;
+}

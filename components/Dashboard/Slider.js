@@ -27,25 +27,25 @@ export default function Carousel() {
 	return (
 		<div>
 			<Slider {...settings} className="mx-0 my-6">
-				<div className="bg-purple rounded-2xl py-8 px-6 mx-0 w-100 text-white">
-					<h3 className="font-bold mb-2">GEI Products</h3>
-					<h2 className="font-bold">NGN</h2>
-					<h1 className="font-bold">#10,000,000</h1>
+				<div className="bg-purple rounded-xl py-5 px-4 mx-0 w-100 text-white">
+					<h3 className="mb-2 text-sm">GEI Products Wallet</h3>
+					<h2 className="text-sm">NGN</h2>
+					<h1 className="font-bold text-lg">#10,000,000</h1>
 				</div>
-				<div className="bg-purple rounded-2xl py-8 px-6 mx-0 w-100 text-white">
-					<h3 className="font-bold mb-2">GEI Products</h3>
-					<h2 className="font-bold">NGN</h2>
-					<h1 className="font-bold">#10,000,000</h1>
+				<div className="bg-purple rounded-xl py-5 px-4 mx-0 w-100 text-white">
+					<h3 className="mb-2 text-sm">GEI Products Wallet</h3>
+					<h2 className="text-sm">NGN</h2>
+					<h1 className="font-bold text-lg">#10,000,000</h1>
 				</div>
-				<div className="bg-purple rounded-2xl py-8 px-6 mx-0 w-100 text-white">
-					<h3 className="font-bold mb-2">GEI Products</h3>
-					<h2 className="font-bold">NGN</h2>
-					<h1 className="font-bold">#10,000,000</h1>
+				<div className="bg-purple rounded-xl py-5 px-4 mx-0 w-100 text-white">
+					<h3 className="mb-2 text-sm">GEI Products Wallet</h3>
+					<h2 className="text-sm">NGN</h2>
+					<h1 className="font-bold text-lg">#10,000,000</h1>
 				</div>
-				<div className="bg-purple rounded-2xl py-8 px-6 mx-0 w-100 text-white">
-					<h3 className="font-bold mb-2">GEI Products</h3>
-					<h2 className="font-bold">NGN</h2>
-					<h1 className="font-bold">#10,000,000</h1>
+				<div className="bg-purple rounded-xl py-5 px-4 mx-0 w-100 text-white">
+					<h3 className="mb-2 text-sm">GEI Products Wallet</h3>
+					<h2 className="text-sm">NGN</h2>
+					<h1 className="font-bold text-lg">#10,000,000</h1>
 				</div>
 			</Slider>
 		</div>
