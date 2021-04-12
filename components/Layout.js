@@ -6,7 +6,7 @@ import { Fade as Hamburger } from "hamburger-react";
 import Header from "./Header";
 import Navigation from "./Navigation";
 
-export default function Layout({ children, title = "Dashboard", back = "false" }) {
+export default function Layout({ children, title = "Dashboard", back=false }) {
 	const [isOpen, setOpen] = useState(false);
 
 	return (
@@ -44,9 +44,9 @@ export default function Layout({ children, title = "Dashboard", back = "false" }
 									<path
 										d="M14 25L2 13.5L14 2"
 										stroke="#09157F"
-										stroke-width="4"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										strokeWidth="4"
+										strokeLinecap="round"
+										strokeLinejoin="round"
 									/>
 								</svg>
 							</a>

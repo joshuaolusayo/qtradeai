@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 export default function ChangePassword() {
 	return (
 		<div>
-			<Layout title="Change Password" back="true">
+			<Layout title="Change Password" back={true}>
 				<Head>
 					<title>Change Password</title>
 				</Head>
