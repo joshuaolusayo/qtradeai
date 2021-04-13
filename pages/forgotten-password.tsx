@@ -34,12 +34,6 @@ export default function Login(): JSX.Element {
             placeholder="ayomideolopha@gmail.com"
           />
         </div>
-
-        <div className="text-right">
-          <Link href="/login">
-            <a className="text-purple my-4 hover:underline text-sm">Login</a>
-          </Link>
-        </div>
         <div>
           <button
             className="bg-purple w-full py-3 text-sm text-center text-white rounded mt-3 border focus:outline-none border-purple"
@@ -47,6 +41,11 @@ export default function Login(): JSX.Element {
           >
             Submit
           </button>
+        </div>
+        <div className="text-right mt-3">
+          <Link href="/login">
+            <a className="text-purple hover:underline text-sm">Already have an account, log in</a>
+          </Link>
         </div>
       </form>
     </AuthLayout>

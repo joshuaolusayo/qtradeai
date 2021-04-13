@@ -121,3 +121,15 @@ body {
     color: #fff;
   }
 }
+
+.login__page .css-yk16xz-control {
+  background: #e5e7ec;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #09157f;
+  color: #09157f;
+}
+
+.login__page .css-yk16xz-control:focus {
+  background: #fff;
+}
