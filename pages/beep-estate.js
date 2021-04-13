@@ -13,10 +13,6 @@ export default function BeepEstate() {
 					<title>Beep Estate</title>
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Beep Estate</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
 					<div className="my-14">
 						<h2 className="font-bold text-center text-2xl mb-2">BeepCity Leverage Program</h2>
 						<p className="text-center font-light text-gray-500">Own YOUR Home in 12 Months</p>

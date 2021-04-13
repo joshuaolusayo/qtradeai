@@ -13,10 +13,6 @@ export default function Home() {
 					<title>Order</title>
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen order">
-					<div className="flex justify-between items-center">
-						<h1>Order</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
 					<div className="my-14">
 						<h2 className="font-bold text-center text-2xl mb-1">Plans built for your every need</h2>
 						<p className="text-center font-thin text-gray-500 mb-0">Support/Subscription Packages</p>

@@ -24,6 +24,10 @@ export default function Layout({ children, title = "Dashboard", back=false }) {
 				</div>
 				<div className="md:col-span-3 lg:col-span-4 xl:col-span-5 bg-theme">
 					<Header />
+					<div className="flex justify-between items-center px-6 lg:px-10">
+						<h1>{title}</h1>
+						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
+					</div>
 					{children}
 				</div>
 			</div>
@@ -62,12 +66,12 @@ export default function Layout({ children, title = "Dashboard", back=false }) {
 				{children}
 
 				{isOpen && (
-					<div className="absolute z-30 bg-white top-0 bottom-0 left-0 w-4/5 sm:w-1/2 min-h-screen overflow-hidden shadow flex flex-col justify-between items-start">
+					<div className="absolute z-30 bg-white top-0 bottom-0 left-0 w-4/5 sm:w-1/2 h-screen overflow-scroll shadow flex flex-col justify-between items-start">
 						<div className="w-full">
 							<Header />
 							<Navigation />
 						</div>
-						<div className="mb-5">
+						<div className="mb-5 px-4">
 							<Image src="/assets/logo.png" alt="Logo" width={236} height={47} />
 						</div>
 					</div>

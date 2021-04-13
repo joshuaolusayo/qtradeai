@@ -45,11 +45,6 @@ export default function Account() {
 					<title>Account</title>
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Account</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
-
 					<div className="my-10">
 						{current !== "walletAddress" && (
 							<div className="bg-purple px-4 py-3 text-white inline-flex rounded-xl">
@@ -109,8 +104,6 @@ export default function Account() {
 										)}
 									</Modal>
 								)}
-
-								{/* {createBank && <CreateBank onClick={setCreateBank} />} */}
 							</div>
 						)}
 						<div className="grid grid-cols-2 justify-between gap-4 my-5">
