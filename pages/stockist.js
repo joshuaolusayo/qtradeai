@@ -108,10 +108,6 @@ export default function Stockist() {
 					<title>Stockist</title>
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Stockist</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
 					<div className="my-10 md:grid md:grid-cols-6 xl:grid-cols-12 md:gap-4 md:items-center text-sm">
 						<div className="grid grid-cols-3 col-span-2 gap-1 sm:w-auto mb-5 md:mb-0 items-center order-last md:order-none">
 							<span className="col-span-3 md:col-span-1">Sort By: </span>

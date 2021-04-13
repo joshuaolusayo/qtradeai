@@ -21,10 +21,6 @@ export default function Home() {
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Dashboard</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
 					{open && (
 						<div className="relative px-2 md:px-4 py-3 my-3 bg-gray-50 border-2 border-purple rounded">
 							<span className="text-sm">

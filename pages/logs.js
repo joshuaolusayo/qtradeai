@@ -16,11 +16,6 @@ export default function Logs() {
 					<title>Logs</title>
 				</Head>
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Logs</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
-
 					<>
 						<div className="grid grid-cols-2 md:grid-cols-3 justify-between gap-4 my-10">
 							<div className="md:col-span-1 h-16 flex justify-center items-center bg-purple rounded-md shadow text-white text-center md:my-0">

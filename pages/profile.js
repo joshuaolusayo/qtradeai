@@ -13,11 +13,6 @@ export default function Profile() {
 				</Head>
 
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Profile</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
-
 					<div className="my-10">
 						<div className="lg:w-3/4 lg:mx-auto">
 							<div className="bg-purple text-light py-6 lg:py-8 flex flex-col justify-center items-center rounded-2xl">

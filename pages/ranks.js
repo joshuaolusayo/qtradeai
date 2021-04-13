@@ -12,48 +12,45 @@ export default function Ranks() {
 				</Head>
 
 				<div className="p-4 md:p-6 lg:p-10 min-h-screen">
-					<div className="flex justify-between items-center">
-						<h1>Ranks</h1>
-						<Image className="header-img" src="/assets/logo.png" alt="Logo" width={215} height={43} />
-					</div>
-
 					<div className="my-10 mx-auto justify-center grid sm:grid-cols-3 gap-6">
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="bg-purple text-white py-1 text-sm text-center rounded w-full border border-purple">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="bg-purple text-white py-1 text-sm text-center rounded w-full border border-purple">
+								Attained
+							</button>
+						</div>
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
+						</div>
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
+						</div>
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
+						</div>
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
+						</div>
 						<div className="w-44">
-                            <Image src="/assets/rank.png" width={175} height={175} />
-                            <button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
-                        </div>
+							<Image src="/assets/rank.png" width={175} height={175} />
+							<button className="text-white py-1 text-sm text-center rounded w-full border disabled">Attained</button>
+						</div>
 					</div>
 				</div>
 			</Layout>
 
-            <style>
-                {`
+			<style>
+				{`
                     .disabled {
                         background: #9399CF;
                         border-color: #9399CF;
                     }
                 `}
-            </style>
+			</style>
 		</div>
 	);
 }
