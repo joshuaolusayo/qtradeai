@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/dashboardLayout/Layout';

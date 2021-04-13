@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Table } from 'antd';
 import { Input } from 'antd';
 import { Select } from 'antd';
@@ -72,9 +73,10 @@ const data = [
 ];
 
 export default function TableData(): JSX.Element {
-  const onSearch = (value) => console.log(value);
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const onSearch = (value) => {};
   const handleChange = (value) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
   };
 
   return (
