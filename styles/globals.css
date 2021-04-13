@@ -1,79 +1,123 @@
 @font-face {
-	font-family: "SFProDisplay";
-	src: url("/fonts/SFProDisplay-Regular.ttf");
-	font-style: normal;
+  font-family: 'SFProDisplay';
+  src: url('/fonts/SFProDisplay-Regular.ttf');
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "SFProDisplayBold";
-	src: url("/fonts/SFProDisplay-Semibold.ttf");
-	font-style: normal;
+  font-family: 'SFProDisplayBold';
+  src: url('/fonts/SFProDisplay-Semibold.ttf');
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "SFProDisplayThin";
-	src: url("/fonts/SFProDisplay-Thin.ttf");
-	font-style: normal;
+  font-family: 'SFProDisplayThin';
+  src: url('/fonts/SFProDisplay-Thin.ttf');
+  font-style: normal;
 }
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: "SFProDisplay", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'SFProDisplay', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .bg-purple {
-	background: #09157f;
+  background: #09157f;
 }
 
 .text-purple {
-	color: #09157f;
+  color: #09157f;
 }
 
 .bg-theme {
-	background: #f7f8fc;
+  background: #f7f8fc;
 }
 
 .border-purple {
-	border-color: #09157f;
+  border-color: #09157f;
 }
 
 .rounded-circle {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .shadow-none {
-	box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .focus:outline-purple {
-	outline-color: #09157f !important;
+  outline-color: #09157f !important;
 }
 
 .selection .MuiInputBase-input {
-	color: #fff;
-	font-size: 14px;
+  color: #fff;
+  font-size: 14px;
 }
 
 .ant-table.ant-table-small .ant-table-tbody > tr > td {
-	padding: 15px 8px !important;
+  padding: 15px 8px !important;
 }
 
 .ant-table.ant-table-small .ant-table-tbody > tr {
-	background: #f7f8fc;
-	font-size: 12px;
+  background: #f7f8fc;
+  font-size: 12px;
 }
 
 .ant-table.ant-table-small .ant-table-thead > tr > th {
-	font-size: 10px;
-	color: #333;
+  font-size: 10px;
+  color: #333;
 }
 
 .ant-table-measure-row {
-	display: none;
+  display: none;
+}
+
+.navigatio__n a {
+  transition: all 500ms ease;
+}
+
+@media screen and (max-width: 767px) {
+  .navigatio__n a:hover,
+  .navigatio__n a.active {
+    background: #09157f;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigatio__n a.active {
+    color: #fff !important;
+  }
+}
+
+.navigatio__n a svg {
+  fill: #09157f;
+}
+
+@media screen and (max-width: 767px) {
+  .navigatio__n a:hover svg,
+  .navigatio__n a.active svg {
+    fill: #fff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigatio__n a svg {
+    fill: #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigatio__n .txt-purple {
+    color: #09157f;
+  }
+
+  .navigatio__n .txt-purple:hover {
+    color: #fff;
+  }
 }
