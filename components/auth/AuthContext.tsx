@@ -39,16 +39,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const logout = async () => {
-    axios.defaults.headers.common.Authorization = '';
-    cookie.remove('token');
+    axios.defaults.headers.common['publicKey'] = '';
+    cookie.remove('publicKey');
     // to support logging out from all windows
     window.localStorage.setItem('logout', Date.now().toString());
-    window.location.assign('/auth/login');
+    window.localStorage.removeItem('userData');
+    window.location.assign('/login');
   };
 
   useEffect(() => {
     try {
-      const token = cookie.get('token');
+      const token = cookie.get('publicKey');
       // const profile = cookie.get('profile');
 
       if (token) {
@@ -106,7 +107,7 @@ export const useAuthActions: () => Auth.AuthActionsContext = () => {
 function useAuthChanged() {
   const syncLogout = (event: StorageEvent) => {
     if (event.key === 'logout') {
-      Router.push('/auth/login');
+      Router.push('/login');
     }
   };
 

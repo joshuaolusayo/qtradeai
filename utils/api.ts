@@ -1,8 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import cookie from 'js-cookie';
 
-const token = cookie.get('token');
-axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+const publicKey = cookie.get('publicKey');
+axios.defaults.headers.common['publicKey'] = publicKey;
+axios.defaults.headers.common['userID'] = cookie.get('userID');
+axios.defaults.headers.common['username'] = cookie.get('username');
+axios.defaults.headers.common['region'] = 'Africa';
 
 async function makeApiCall<T = any>(
   url: string,

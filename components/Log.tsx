@@ -1,4 +1,9 @@
+import useOrders from '../pages/api/order';
+
 export default function Log(): JSX.Element {
+  const { ordersData } = useOrders();
+  console.log(ordersData);
+
   return (
     <>
       <div className="lg:grid lg:grid-cols-2 lg:gap-4 mt-8">

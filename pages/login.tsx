@@ -38,6 +38,10 @@ export default function Login(): JSX.Element {
         data: payload,
       });
       localStorage.setItem('userData', JSON.stringify(content));
+      cookie.set('publicKey', content.data[0].publicKey);
+      cookie.set('userID', content.data[0].userID);
+      cookie.set('username', content.data[0].username);
+
       if (error.status === '1') {
         setLoginDetailsError(error.message);
         // return;

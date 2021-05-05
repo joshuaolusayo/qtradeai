@@ -1,6 +1,99 @@
 import Image from 'next/image';
+import { Button, Avatar, makeStyles } from '@material-ui/core';
+import Menu, { MenuProps } from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { withStyles } from '@material-ui/core';
+// import { useState } from 'react';
+import ListItemText from '@material-ui/core/ListItemText';
+import React, { useEffect, useState } from 'react';
+import { useAuthActions } from '../auth/AuthContext';
+
+const StyledMenu = withStyles({
+  paper: {
+    border: '1px solid #d3d4d5',
+  },
+})((props: MenuProps) => (
+  <Menu
+    elevation={0}
+    getContentAnchorEl={null}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'center',
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'center',
+    }}
+    {...props}
+  />
+));
+
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': {
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.main,
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: '#000000',
+      },
+    },
+    '&:hover': {
+      backgroundColor: 'transparent !important',
+      borderRight: 'none !important',
+      color: theme.palette.primary.main,
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: '#000000',
+      },
+    },
+  },
+}))(MenuItem);
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  small: {
+    width: theme.spacing(4),
+    height: theme.spacing(4),
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+}));
 
 export default function Header(): JSX.Element {
+  const classes = useStyles();
+  const [admin, setAdminData] = useState<AdminData>();
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const { logout } = useAuthActions();
+
+  async function getAdminData() {
+    const data: AdminData = JSON.parse(localStorage.getItem('userData'));
+    try {
+      await setAdminData(data);
+    } catch {
+      throw Error;
+    }
+  }
+
+  useEffect(() => {
+    getAdminData();
+  }, []);
+
   return (
     <>
       <header className="bg-white w-full md:w-3/4 lg:w-4/5 xl:w-5/6 z-20 md:fixed shadow md:shadow-none">
@@ -30,8 +123,26 @@ export default function Header(): JSX.Element {
               <h3 className="text-black mb-0">Ayomide Olopha</h3>
               <span className="text-gray-500 email">ayomideolopha@gmail.com</span>
             </div>
-            <div className="px-2 flex justify-center items-center">
-              <Image src="/assets/profile.png" width={35} height={35} />
+            <div className="flex justify-center items-center">
+              {/* <Image src="/assets/profile.png" width={35} height={35} /> */}
+              <Button onClick={handleClick} className="focus:outline-none">
+                <div className="flex flex-row ml-4">
+                  <Avatar src={admin?.profilePicUrl ?? ''} className={classes.small} />
+                  <img src="/assets/downArrow.svg" className="m-auto ml-2" width={10} />
+                  {/* <ArrowDropDown className="m-auto"/> */}
+                </div>
+              </Button>
+              <StyledMenu
+                id="customized-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <StyledMenuItem onClick={logout}>
+                  <ListItemText primary="Logout" />
+                </StyledMenuItem>
+              </StyledMenu>
             </div>
           </div>
 

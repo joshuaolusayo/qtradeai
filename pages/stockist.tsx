@@ -7,6 +7,7 @@ import { Select } from 'antd';
 import { Table } from 'antd';
 
 import 'antd/dist/antd.css';
+import useStockist from './api/stockist';
 const { Option } = Select;
 const { Search } = Input;
 
@@ -33,80 +34,39 @@ const columns = [
   },
 ];
 
-const tableData = [
-  {
-    key: '1',
-    area: 'LAG-2020',
-    name: 'Xess Stokist Alaba',
-    phoneNumber: '09001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '2',
-    area: 'LAG-2020',
-    name: 'aXpress Stokist Alaba',
-    phoneNumber: '01001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '3',
-    area: 'LAG-2020',
-    name: 'wXpress Stokist Alaba',
-    phoneNumber: '09001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '4',
-    area: 'LAG-2020',
-    name: 'eXpress Stokist Alaba',
-    phoneNumber: '08001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '5',
-    area: 'LAG-2020',
-    name: 'Xpress Stokist Alaba',
-    phoneNumber: '09001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '6',
-    area: 'LAG-2020',
-    name: 'Xpress Stokist Alaba',
-    phoneNumber: '09001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-  {
-    key: '7',
-    area: 'LAG-2020',
-    name: 'Xpress Stokist Alaba',
-    phoneNumber: '02001921212',
-    email: 'Doncharlison@gmail.com',
-    address: 'My address is my address',
-  },
-];
+const tableData = [];
 
 export default function Stockist(): JSX.Element {
+  const { loading, stockistData } = useStockist();
+
   const handleChange = (value) => {
     console.log(`selected ${value}`);
   };
 
   const onSearch = (value) => console.log(value);
 
-  const [pagination] = useState({ current: 1, pageSize: 10 });
+  const [pagination] = useState({ defaultPageSize: 7 });
 
+  console.log(stockistData);
   return (
     <div>
       <Layout title="Stockist">
         <Head>
           <title>Stockist</title>
         </Head>
+
+        {stockistData &&
+          stockistData.map((data) => {
+            tableData.push({
+              key: data.id,
+              area: data.area,
+              name: data.name,
+              phoneNumber: data.phone,
+              email: data.email,
+              address: data.address,
+            });
+          })}
+
         <div className="p-4 md:p-6 lg:p-10 min-h-screen">
           <div className="my-10 md:grid md:grid-cols-6 xl:grid-cols-12 md:gap-4 md:items-center text-sm">
             <div className="grid grid-cols-3 col-span-2 gap-1 sm:w-auto mb-5 md:mb-0 items-center order-last md:order-none">
@@ -152,6 +112,7 @@ export default function Stockist(): JSX.Element {
 
           <Table
             columns={columns}
+            // dataSource={tableData}
             dataSource={tableData}
             pagination={pagination}
             size="small"

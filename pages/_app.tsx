@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
  */
 MyApp.getInitialProps = async function (appContext: AppContextType) {
   const { ctx } = appContext;
-  const { token } = nextCookie(ctx);
+  const { publicKey } = nextCookie(ctx);
 
   const protectedRoutes = [
     { route: '/' },
@@ -41,7 +41,7 @@ MyApp.getInitialProps = async function (appContext: AppContextType) {
   if (protectedRoutes.some(({ route }) => route === ctx.pathname)) {
     try {
       // no token means they aren't logged in, so we push user to the login page
-      if (!token) throw Error;
+      if (!publicKey) throw Error;
     } catch (error) {
       return redirectTo(`/login?redirectUrl=${ctx.req?.url ?? '/'}`, appContext);
     }
