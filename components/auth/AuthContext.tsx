@@ -25,7 +25,7 @@ const reducer = (state: any, action: { type: string; payload?: any }) => {
       return { ...state, validatingToken: false };
     }
     case 'logout': {
-      return { ...state, validatingToken: false, isLoggedIn: false, token: '' };
+      return { ...state, validatingToken: false, isLoggedIn: false, publicKey: '' };
     }
     default: {
       throw new Error('Invalid auth reducer action type');
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const logout = async () => {
-    axios.defaults.headers.common['publicKey'] = '';
+    // axios.defaults.headers.common['publicKey'] = '';
     cookie.remove('publicKey');
     // to support logging out from all windows
     window.localStorage.setItem('logout', Date.now().toString());
@@ -49,11 +49,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
 
   useEffect(() => {
     try {
-      const token = cookie.get('publicKey');
+      const publicKey = cookie.get('publicKey');
       // const profile = cookie.get('profile');
 
-      if (token) {
-        const tokenContent = jwtDecode<any>(token);
+      if (publicKey) {
+        const tokenContent = jwtDecode<any>(publicKey);
         // const profileContent = jwtDecode<any>(token);
 
         dispatch({
@@ -66,6 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
 
       dispatch({ type: 'end_login_check' });
     } catch (error) {
+      console.log(error);
       logout();
     }
   }, []);

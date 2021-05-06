@@ -1,8 +1,10 @@
 import useOrders from '../pages/api/order';
-export default function Log(): JSX.Element {
+export default function Order(): JSX.Element {
   const { ordersData } = useOrders();
+  console.log(ordersData);
   return (
     <>
+      fdsgdhfjg
       <div className="lg:grid lg:grid-cols-2 lg:gap-4 mt-8">
         {ordersData &&
           ordersData.map((data) => {
@@ -78,7 +80,6 @@ export default function Log(): JSX.Element {
             );
           })}
       </div>
-
       <style jsx>
         {`
           .bg-yellow {

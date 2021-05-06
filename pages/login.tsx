@@ -37,11 +37,19 @@ export default function Login(): JSX.Element {
       const { content, error } = await makeApiCall<Auth.LoginResponse>('/customer/login', 'post', {
         data: payload,
       });
+
+      // let now = new Date();
+      // const time = now.getTime();
+      // const expireTime = time + 1000 * 36000;
+      // now.setTime(expireTime);
+
+      const expires = new Date(Date.now() + 86400 * 1000);
+
       localStorage.setItem('userData', JSON.stringify(content));
-      cookie.set('publicKey', content.data[0].publicKey);
+      cookie.set('publicKey', content.data[0].publicKey, { expires });
       cookie.set('userID', content.data[0].userID);
       cookie.set('username', content.data[0].username);
-
+      axios.defaults.headers.common['publicKey'] = content.data[0].publicKey;
       if (error.status === '1') {
         setLoginDetailsError(error.message);
         // return;

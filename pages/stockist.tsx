@@ -47,7 +47,6 @@ export default function Stockist(): JSX.Element {
 
   const [pagination] = useState({ defaultPageSize: 7 });
 
-  console.log(stockistData);
   return (
     <div>
       <Layout title="Stockist">
@@ -55,8 +54,8 @@ export default function Stockist(): JSX.Element {
           <title>Stockist</title>
         </Head>
 
-        {stockistData &&
-          stockistData.map((data) => {
+        {!loading &&
+          stockistData?.map((data) => {
             tableData.push({
               key: data.id,
               area: data.area,
@@ -110,15 +109,17 @@ export default function Stockist(): JSX.Element {
             </div>
           </div>
 
-          <Table
-            columns={columns}
-            // dataSource={tableData}
-            dataSource={tableData}
-            pagination={pagination}
-            size="small"
-            className="my-10 text-sm"
-            scroll={{ x: true }}
-          />
+          {!loading && (
+            <Table
+              columns={columns}
+              // dataSource={tableData}
+              dataSource={tableData}
+              pagination={pagination}
+              size="small"
+              className="my-10 text-sm"
+              scroll={{ x: true }}
+            />
+          )}
         </div>
       </Layout>
 

@@ -1,8 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import cookie from 'js-cookie';
 
-const publicKey = cookie.get('publicKey');
-axios.defaults.headers.common['publicKey'] = publicKey;
+// const publicKey = cookie.get('publicKey');
+// axios.defaults.headers.common.publicKey = publicKey;
+axios.defaults.headers.common['publicKey'] = cookie.get('publicKey');
 axios.defaults.headers.common['userID'] = cookie.get('userID');
 axios.defaults.headers.common['username'] = cookie.get('username');
 axios.defaults.headers.common['region'] = 'Africa';

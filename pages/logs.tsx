@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/dashboardLayout/Layout';
-import Log from '../components/Log';
+import Order from '../components/Order';
 
 import 'antd/dist/antd.css';
 
@@ -71,7 +71,7 @@ export default function Logs(): JSX.Element {
                 Payments
               </button>
             </div>
-            <Log />
+            {current === 'orders' ? <Order /> : current === ''}
           </>
         </div>
       </Layout>
